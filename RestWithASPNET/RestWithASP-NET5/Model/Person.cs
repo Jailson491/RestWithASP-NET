@@ -1,16 +1,23 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.ComponentModel.DataAnnotations.Schema;
 
 namespace RestWithASP_NET5.Model
 {
+    [Table("person")]
     public class Person
     {
-        public int Id { get; set; }
+        [Column("id")]
+        public long Id { get; set; }
+
+        [Column("First_Name")]
         public string FirstName { get; set; }
-        public string LstName { get; set; }
-        public string Adress { get; set; }
+
+        [Column("Last_Name")]
+        public string LastName { get; set; }
+
+        [Column("address")]
+        public string Address { get; set; }
+
+        [Column("gender")]
         public string Gender { get; set; }
 
     }
